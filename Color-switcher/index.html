@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Switcher</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 20px 100px;
+        }
+        h1{
+            text-align: center;
+            font-size: 30px;
+            text-decoration: underline;
+        }
+        img{
+            width:100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        p{
+            text-align: justify;
+            font-size: 20px;
+        }
+
+        #color-switcher{
+            text-align: right;
+        }
+        .color{
+            width: 20px ;
+            display: inline-block;
+            border-radius: 50%;
+            height: 20px;
+            border: 2px solid red;
+            margin: 10px;
+            cursor:pointer;
+        }
+        #blue{
+            background-color: aqua;
+
+        }
+        #black{
+            background-color: rgb(0, 156, 0);
+        }
+
+        #yellow{
+            background-color: yellow;
+        }
+        #purple{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="color-switcher">
+        <span class="color" id="blue" onclick="changeBG('aqua')"></span><span id="black" onclick="changeBG('rgb(0, 156, 0)')" class="color"></span><span id="yellow" onclick="changeBG('yellow')" class="color"></span><span id="purple" onclick="changeBG('purple')" class="color"></span>
+    </div>
+    <h1 class="txt">About US</h1>
+    <img src="bg.jpg.jpg" alt="">
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda atque unde harum quibusdam, dolores quaerat fugit aperiam eligendi provident quasi, inventore placeat iste excepturi dolorum culpa est labore facere nostrum eius vel sunt accusamus! Laudantium quam aperiam modi beatae. Fugit quo unde, repudiandae eaque quam quas deleniti a quae quaerat aperiam, vero facere ipsum odit iste doloremque cupiditate ea qui laudantium eius at ex nisi. Ipsa inventore, reiciendis natus voluptas rerum sequi et. Provident, perspiciatis, a ab tempora eligendi necessitatibus omnis rerum consequatur iste nobis adipisci non ullam. Molestias vitae exercitationem delectus magnam commodi. Cumque vitae magni laboriosam commodi delectus, totam, deleniti expedita, nam accusamus fuga deserunt perferendis officiis dolore ab. Animi, perferendis, cum nobis, adipisci dolorum ab praesentium quos qui expedita dolor obcaecati aliquid velit aspernatur eius quod harum natus dignissimos at reprehenderit corrupti incidunt officia similique. Dignissimos nostrum mollitia repellat at modi aperiam, corrupti magnam deleniti iste odio, inventore fugiat praesentium. Ea repellat reiciendis expedita doloribus culpa, aspernatur vero. Ratione, mollitia dicta odio cupiditate labore eligendi, doloribus optio aperiam quis tempore voluptatum nisi quae officiis deleniti vero architecto aspernatur delectus maxime repellendus qui quia nostrum. Tempore omnis deleniti ad natus hic totam. Explicabo quidem sit, perferendis molestiae asperiores tenetur. Dolorum, sequi. Sit earum labore mollitia laboriosam. Similique vel pariatur quos voluptas aliquid quaerat in, exercitationem velit libero cupiditate assumenda recusandae reprehenderit, ducimus laborum fugiat unde consectetur nostrum magni perferendis est?</p>
+    <script>    
+        function changeBG(color){
+            document.body.style.backgroundColor=color
+            let text=document.getElementsByClassName("txt");
+            if(color=="purple"){
+            for(let elm of text){
+                elm.style.color="white"
+            }
+        }
+            else{
+                for(let elm of text){
+                elm.style.color="black"
+            }
+            }
+                   
+        }
+    </script>
+</body>
+</html>

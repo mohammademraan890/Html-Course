@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky-Navbar</title>
+    <style>
+        body {
+            padding: 20px 100px;
+            margin: 0px;
+        }
+
+        #header {
+            text-align: center;
+
+        }
+
+        #header img {
+            width: 300px;
+            float: center;
+        }
+
+        #container {
+            text-align: center;
+
+        }
+
+        #container img {
+            width: 100%;
+            height: auto;
+        }
+
+        #container h1 {
+            font-size: 50px;
+            text-decoration: underline;
+            margin-top: 0px;
+        }
+
+        #container p {
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        .menu-bar li {
+            display: inline-block;
+            margin: 30px 50px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .menu-bar {
+            background-color: blueviolet;
+            color: white;
+            margin: 20px 0px;
+            text-align: center;
+            box-shadow: 2px 2px 10px gray;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <img src="logo.svg" alt="">
+    </div>
+    <nav class="menu-bar">
+        <li>Home</li>
+        <li>About us</li>
+        <li>Out Team</li>
+        <li>Clients</li>
+        <li>Contact US</li>
+    </nav>
+    <div id="container">
+        <h1>Contact Us</h1>
+        <img src="bg.jpg.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, nam qui. Ipsam quas, quasi labore accusantium
+            explicabo a! Molestias modi ipsum esse at ea reprehenderit. Repellat vero asperiores veniam voluptas fuga
+            repellendus dicta ipsa distinctio consequuntur cumque ipsam odit sit voluptatem nihil, aliquid perspiciatis
+            nostrum est obcaecati a id. Nesciunt velit culpa fuga unde illum quo quos laboriosam! Culpa quo nesciunt
+            laudantium dolorum minus, animi molestias incidunt quia inventore iusto consequuntur eos reprehenderit hic
+            voluptates architecto voluptatibus est deserunt maiores, necessitatibus modi? Tempora, excepturi
+            perferendis. Molestiae doloremque, dolore quasi corporis aperiam sapiente assumenda ratione blanditiis
+            voluptates distinctio adipisci quisquam mollitia suscipit vel rerum eaque iste odit est, a ut, quae aut. Ad
+            molestiae quae corporis officiis nobis, nesciunt totam beatae, possimus animi recusandae neque? Asperiores
+            obcaecati minima eum porro nostrum. Repellat ipsam fugiat ipsum, neque, inventore fugit veniam ipsa corporis
+            minus consequuntur aperiam laboriosam, deserunt earum amet illo pariatur culpa! Necessitatibus officia
+            repellendus neque, doloribus sunt deleniti odit, autem eum, saepe rem excepturi praesentium harum sit
+            numquam voluptatum. Veniam modi earum quam, dignissimos laboriosam ducimus dolorum dicta. Aliquid, possimus
+            quaerat. Saepe, alias excepturi, similique provident maxime aut dignissimos neque illum quasi officia quis
+            voluptatum exercitationem et amet. Nisi, repellat incidunt!</p>
+    </div>
+    <!-- <script>
+        window.addEventListener("scroll", function () {
+        let menu = document.getElementsByClassName("menu-bar")
+            if (window.pageYOffset > 85) {
+                menu.classList.add('sticky');
+            }
+        })
+    </script> -->
+    <script>
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 85) {
+          document.querySelector(".menu-bar").classList.add("sticky");
+        } else {
+          document.querySelector(".menu-bar").classList.remove("sticky");
+        }
+      });
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Validation</title>
+    <style>
+        body{
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #form-container{
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+           
+        }
+        #form-container h1{
+           margin: 0px 0px 10px 0px;
+        }
+        input{
+            margin: 10px;
+            width: 200px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button{
+           margin-top: 15px; 
+           width: 200px;
+           padding: 9px 22px 9px 22px;
+           background-color: #3498db;
+           color: white;
+           font-weight: 400;
+           font-size: 18px;
+           border: 0px;
+           cursor: pointer;
+        }
+        .error{
+            margin: 0px 20px;
+            color: red;
+            text-align: left;
+            /* margin: 0px; */
+        }
+    </style>
+</head>
+<body>
+    <div id="form-container">
+        <h1>Login</h1>
+        <form action="" onsubmit="return validateform()">
+        <input id="userName" type="text" placeholder="User Name"><br> 
+        <p id="userError" class="error"></p>
+        <input  id="password" type="password" placeholder="Password"><br>
+        <p id="passError" class="error"></p>
+
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+    <script>
+       let userName= document.querySelector("#userName")
+       let password= document.querySelector("#password")
+        let flag=0;
+      function validateform(){
+        if(userName.value==""){
+            document.querySelector("#userError").innerHTML="User Name is Empty."
+            flag=0;
+        }else if(userName.value.length<3){
+            document.querySelector("#userError").innerHTML="Enter your full name."
+            flag=0;
+        }
+        else{
+            document.querySelector("#userError").innerHTML="";
+            flag=1;
+        }
+        if(password.value==""){
+            document.querySelector("#passError").innerHTML="Enter the Password"
+            flag=0;
+        }else if(password.value.length<4){
+            document.querySelector("#passError").innerHTML="Password has atleast 4 digits."
+            flag=0;
+
+        }
+        else{
+            document.querySelector("#passError").innerHTML="";  
+            flag=1;
+        }
+       if(flag==1){
+           return true;
+           alert("You are LogIn successfully")
+        }
+       else{
+        return false;
+       }
+      }
+    </script>
+</body>
+</html>

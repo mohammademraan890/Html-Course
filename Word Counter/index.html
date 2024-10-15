@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word and Character Counter</title>
+    <style> 
+       .container{
+        padding: 50px 150px;
+        text-align: center;
+        /* margin-top: 100px; */
+       }
+       .container h1{
+        background-color: rgb(0, 157, 157);
+        padding: 6px;
+        color: white;
+        margin: 0px;
+       }
+       .container textarea{
+        height: 15vw;
+        width: 78.5vw;
+        margin: 0px;
+        font-size: 23px;
+       }
+       .container p{
+        font-size: 25px;
+        font-weight:900;
+        word-spacing: 10px;
+        background-color: rgb(0, 157, 157);
+        color: white;
+        margin: 0px;
+        padding: 5px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <div>
+        <h1>Word and Character Counter</h1>
+        <textarea id="text"></textarea>
+        <p><span id="word">0</span> Words and <span id="char">0</span> Characters</p>
+    </div>
+    </div>
+    <script>
+       let textbox= document.getElementById("text");
+       textbox.addEventListener("input",function(){        var text=this.value;
+        
+       let char= document.getElementById("char").innerHTML=(text.length)
+        text=text.trim();
+       let cleanword=text.filter(function(elm){
+         return elm!="";
+       })
+       let word=text.split(" ");
+       document.getElementById("word").innerHTML=word.length;
+       });
+
+    </script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word and Character Counter</title>
+    <style>
+        .container {
+            padding: 50px 150px;
+            text-align: center;
+            /* margin-top: 100px; */
+        }
+        .container h1 {
+            background-color: rgb(0, 157, 157);
+            padding: 6px;
+            color: white;
+            margin: 0px;
+        }
+        .container textarea {
+            height: 15vw;
+            width: 78.5vw;
+            margin: 0px;
+            font-size: 23px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+        .container p {
+            font-size: 25px;
+            font-weight: 900;
+            word-spacing: 10px;
+            background-color: rgb(0, 157, 157);
+            color: white;
+            margin: 0px;
+            padding: 5px;
+        }
+        
+        /* Media queries for small devices */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            .container textarea {
+                height: 20vw;
+                width: 100vw;
+                font-size: 18px;
+            }
+            .container p {
+                font-size: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            .container textarea {
+                height: 15vw;
+                width: 100vw;
+                font-size: 15px;
+            }
+            .container p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Word and Character Counter</h1>
+            <textarea id="text"></textarea>
+            <p><span id="word">0</span> Words and <span id="char">0</span> Characters</p>
+        </div>
+    </div>
+    <script>
+        const textbox = document.getElementById("text");
+        textbox.addEventListener("input", function() {
+            const text = this.value;
+            const charCount = text.length;
+            document.getElementById("char").innerHTML = charCount;
+            
+            const cleanText = text.trim().replace(/\s+/g, ' ');
+            const wordCount = cleanText.split(" ").length;
+            document.getElementById("word").innerHTML = wordCount;
+        });
+    </script>
+</body>
+</html> -->

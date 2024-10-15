@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #2b1d0f;
+    color: white;
+}
+header{
+    background-color: #212121;
+    position: sticky;
+    top: 0px;
+    box-shadow: -14px -1px 8px 2px gray;;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 15px ;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+header nav #search-box{
+    padding: 3px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+header nav #btn1{
+    padding: 4px;background-color: red;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+main section{
+   text-align: center;
+}
+.recepieContainer {
+    /* margin: 20px; */
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 80%;
+    margin: auto;
+    padding: 16px 20px;
+    gap: 20px 60px;
+    place-items: center;
+}
+.recepi{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    max-width: 350px;
+    max-height: 450px;
+    /* margin:20px ; */
+}
+.recepi img{
+    border-top: 10px;
+
+}
+@media screen and (max-width:600px){
+    header nav{
+        width: 80%;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+        margin: auto;
+        text-align: center;
+    }
+    header nav div:nth-child(2){
+        margin-top: 10px;
+    }
+    header nav form #btn1{
+        margin-top: 10px;
+    }
+}
+

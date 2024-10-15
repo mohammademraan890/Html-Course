@@ -1,0 +1,91 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body #main {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(160, 255, 160);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main #panel {
+    width: 95%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+#main #panel #ptop {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(103, 200, 103);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.elem {
+    display: flex;
+    align-items: center;
+}
+
+
+#main #panel #ptop .elem .box {
+    background-color: rgb(237, 237, 237) ;
+    padding: 10px 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    color: rgb(103, 200, 103) ;
+    font-weight: 600;
+}
+#main #panel #ptop .elem h4{
+    font-size: 22px;
+    margin: 0px 10px 0px 0px;
+    color: white;
+}
+#main #panel  #pbottom{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#main #panel #pbottom .bubble{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(103, 200, 103) ;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#main #panel #pbottom .bubble:hover{
+    background-color:rgb(34, 94, 34) ;
+
+}

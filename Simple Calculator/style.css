@@ -1,0 +1,31 @@
+.button{
+    /* padding: 13px; */
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10%;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    width: 2.39rem;
+    height: 2.39rem;
+}
+
+.button:active{
+    background-color: rgb(182, 182, 182);
+    
+}
+.innercont{
+width: auto;
+height: auto;
+background: rgb(135, 135, 135);
+padding: 10px;
+border-radius: 10px;
+}
+.row .input{
+    padding: 0px 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 1px solid black;
+    width: 11.7rem;
+    height: 3rem;
+}

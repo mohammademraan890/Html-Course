@@ -1,0 +1,37 @@
+body{
+    font-family:Arial, Helvetica, sans-serif ;
+}
+.container{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+h1{
+    font-size: 4rem;
+}
+form{
+    width: 50vw;
+    height: 50vh;
+    text-align: center;
+    display: inline-block;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+form .input .inputs{
+    height: 7vh;
+    width: 15vw;
+    text-align: center;
+    font-size: 1em;
+}
+form label{
+    font-size: 30px;
+}
+
